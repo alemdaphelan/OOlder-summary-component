@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+--width-card: 375px;
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+--fs: 16px;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    height:100vh;
+    min-height: 100vh;
+    display:flex;
+    place-content: center;
+    place-items: center;
+    font-family: "Red Hat Display",sans-serif;
+    padding:0;
+    margin:0;
+    object-fit: fill;
+}
+.bg-1{
+    position: absolute;
+    z-index: -1;
+    top:0;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.hero-img{
+    width:100%;
+    border-radius: 15px 15px 0 0 ;
+    position: relative;
+    top:5px;
+}
+.container{
+    object-fit: cover;
+    width:var(--width-card);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px 10px var(--Pale-blue);
+    text-align: center;
+}
+.main{
+    padding:1rem 3.5rem;
+    background-color: var(--Very-pale-blue);
+}
+.hero-title{
+    font-size:24px;
+    color:var(--Dark-blue);
+    font-weight: 900;
+}
+.content{
+    font-size: var(--fs);
+    color:var(--Desaturated-blue);
+    font-weight: 500;
+    line-height:1.6rem;
+}
+.music-bar{
+    margin-top:2rem;
+    margin-bottom:1rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    background-color: var(--Very-pale-blue);
+}
+h2{
+    font-size:var(--fs);
+    font-weight: 900;
+    color: var(--Dark-blue);
+    line-height: 1rem;
+}
+span{
+    margin-left:-1.5rem;
+}
+.music-bar >span > p {
+    font-size: var(--fs);
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+    line-height: 0;
+}
+a{
+    font-size: var(--fs);
+    font-weight: 900;
+    text-transform:none ;
+    color:var(--Bright-blue);
+    position: relative;
+    transition: 0.1s all ease;
+}
+.button{
+    padding:0 2rem;
+}
+button{
+    width:100%;
+    padding:1rem;
+    font-size: var(--fs);
+    font-weight: 800;
+    margin-bottom:1rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s all ease;
+}
+.discard{
+    background-color:var(--Bright-blue);
+    color:var(--Very-pale-blue);
+    box-shadow: 0px 25px 10px  var(--Pale-blue);
+}
+.discard:hover{
+    cursor: pointer;
+    background-color: hsl(245, 75%, 65%) ;
+}
+a:hover{
+    cursor: pointer;
+    color: hsl(245, 75%, 65%);
+}
+.cancel{
+    background-color: transparent;
+    color:var(--Desaturated-blue);
+}
+.cancel:hover{
+    cursor: pointer;
+    color:var(--Dark-blue);
+}
